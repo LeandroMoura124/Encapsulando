@@ -66,7 +66,9 @@ public class ControleRemoto implements Controlador{
         if (this.GetLigado()){
             this.SetVolume(this.GetVolume()+1);
           System.out.println("O volume aumentou para: " + this.GetVolume());
-        
+        }
+        else{
+            System.out.println("Impossível aumentar volume com a TV desligada!");
         }
     }
     @Override
@@ -76,6 +78,9 @@ public class ControleRemoto implements Controlador{
         if (this.GetLigado()){
             this.SetVolume(this.GetVolume()-1);
             System.out.println("O volume diminuiu para: " + this.GetVolume());
+        }
+        else{
+            System.out.println("Impossível diminuir volume com a TV desligada!");
         }
         
     }
