@@ -44,7 +44,7 @@ public class ControleRemoto implements Controlador{
     
     @Override
     public void abrirMenu() {
-        if(this.GetLigado()){
+       
             // TODO Auto-generated method stub
             // throw new UnsupportedOperationException("Unimplemented method 'abrirMenu'");
             System.out.println("Está ligado?: " + this.GetLigado());
@@ -53,10 +53,7 @@ public class ControleRemoto implements Controlador{
             for(int i=0; i<this.GetVolume(); i+=10){
                 System.out.print("[]");
             }
-        }
-        else{
-            System.out.println("Impossível abrir menu, TV desligada!");
-        }
+       
 
     }
 
@@ -123,7 +120,7 @@ public class ControleRemoto implements Controlador{
         if(this.GetLigado() && this.GetTocando()){
             this.SetTocando(false);
         }
-        else{
+        else if (!(this.GetLigado())){
             System.out.println("Não foi possível pausar, a TV está desligada!");
         }
     }

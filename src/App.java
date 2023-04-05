@@ -8,7 +8,6 @@ public class App {
         c1.pause();
         c1.ligarMudo();
         c1.desligar();
-       
         c1.abrirMenu();
     }
 }
