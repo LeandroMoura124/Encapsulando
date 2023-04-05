@@ -105,6 +105,9 @@ public class ControleRemoto implements Controlador{
         if(this.GetLigado() && !(this.GetTocando())){
             this.SetTocando(true);
         }
+        else{
+            System.out.println("Não foi possível dar play, a TV está desligada!");
+        }
     }
     @Override
     public void pause() {
@@ -112,6 +115,9 @@ public class ControleRemoto implements Controlador{
         // throw new UnsupportedOperationException("Unimplemented method 'pause'");
         if(this.GetLigado() && this.GetTocando()){
             this.SetTocando(false);
+        }
+        else{
+            System.out.println("Não foi possível pausar, a TV está desligada!");
         }
     }
     
