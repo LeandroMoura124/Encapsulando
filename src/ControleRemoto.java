@@ -29,6 +29,8 @@ public class ControleRemoto implements Controlador{
     private boolean GetTocando(){
         return this.tocando;
     }
+
+    //métodos especifícos
     @Override
     public void ligar() {
         // TODO Auto-generated method stub
